@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Notes</string>
+    <string name="back">BACK</string>
+    <string name="next">NEXT</string>
+    <string name="notes">Notes</string>
+    <string name="onboard_image">OnBoard image</string>
+    <string name="finish">FINISH</string>
+    <string name="about">About</string>
+    <string name="rate_us">Rate App</string>
+    <string name="feedback">Feedback</string>
+    <string name="share">Share</string>
+    <string name="content_description_about">About</string>
+    <string name="content_description_feedback">Feedback</string>
+    <string name="content_description_rate_us">Rate</string>
+    <string name="content_description_share">Share</string>
+    <string name="more">More</string>
+    <string name="delete">Delete</string>
+    <string name="selected">item selected</string>
+    <string name="items_selected">items selected</string>
+    <string name="error_msg">Something went wrong.</string>
+    <string name="check_all_cards">Select all</string>
+    <string name="select_items">Select items</string>
+    <string name="add_new_note">Add New Note</string>
+    <string name="newNote">newNote</string>
+    <string name="edit_title">Edit Title</string>
+    <string name="save">save</string>
+
+
+</resources>
