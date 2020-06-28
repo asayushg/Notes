@@ -55,9 +55,9 @@ public class OnBoardingAdapter extends PagerAdapter {
     }
 
     public int[] images = {
-            R.drawable.notes_logo,
-            R.drawable.notes_logo,
-            R.drawable.notes_logo
+            R.mipmap.boarding_1,
+            R.mipmap.boarding_2,
+            R.mipmap.boarding_3
     };
 
     public String[] titles = {

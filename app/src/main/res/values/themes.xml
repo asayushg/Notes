@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Theme.App" parent="@style/AppTheme">
+    <style name="Theme.App" parent="AppTheme">
         <item name="windowActionModeOverlay">true</item>
-        <item name="actionModeStyle">@style/Widget.App.ActionMode</item>
-        <item name="actionModeCloseDrawable">@drawable/icon_close</item>
-        <item name="actionBarTheme">@style/AppTheme</item>
+        <item name="actionModeStyle">@style/Base.Widget.AppCompat.ActionMode.NoteActionModeStyle</item>
+        <item name="actionModeCloseDrawable">@drawable/arrow_back_small</item>
+        <item name="actionMenuTextColor">@color/white</item>
     </style>
 
 </resources>

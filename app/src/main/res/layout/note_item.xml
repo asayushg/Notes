@@ -9,14 +9,13 @@
         android:clickable="true"
         android:focusable="true"
         android:checkable="true"
+        android:background="@color/colorBackground"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorAccent"
-        app:cardCornerRadius="8dp"
-        android:elevation="8dp"
-        android:layout_margin="10dp">
+        app:cardCornerRadius="8dp">
 
         <LinearLayout
+            android:background="@color/colorBackground"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -25,30 +24,28 @@
                 android:id="@+id/noteTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:minHeight="20dp"
                 android:padding="10dp"
                 android:text="Note"
-                android:textColor="@color/colorPrimaryDark" />
+                android:textColor="@color/note_heading" />
 
             <TextView
                 android:id="@+id/noteContent"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:minHeight="50dp"
                 android:maxLines="4"
                 android:padding="10dp"
-                android:layout_marginTop="10dp"
+                android:ellipsize="end"
+                android:layout_marginTop="2dp"
                 android:text="Note description"
-                android:textColor="@color/dark_grey" />
+                android:textColor="@color/note_content" />
             <TextView
                 android:id="@+id/noteDate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:minHeight="20dp"
+                android:layout_marginTop="2dp"
                 android:padding="10dp"
                 android:text="Note description"
-                android:textColor="@color/dark_grey" />
+                android:textColor="@color/note_content" />
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 

@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorAccent"
+    android:background="@color/colorBackground"
     tools:context=".ui.newuser.OnBoardingActivity">
 
     <androidx.viewpager.widget.ViewPager
@@ -26,7 +26,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="0.4"
-            android:backgroundTint="@color/colorAccent"
+            android:backgroundTint="@color/colorBackground"
             android:text="@string/back"
             android:textColor="@color/black"
             android:textSize="14sp" />
@@ -47,7 +47,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="0.4"
-            android:backgroundTint="@color/colorAccent"
+            android:backgroundTint="@color/colorBackground"
             android:text="@string/next"
             android:textColor="@color/black"
             android:textSize="14sp" />

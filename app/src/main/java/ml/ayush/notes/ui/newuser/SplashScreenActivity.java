@@ -18,13 +18,11 @@ public class SplashScreenActivity extends AppCompatActivity {
 
     @BindView(R.id.logo)
     ImageView logo;
-    private SharedPreferences sp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
-        sp = getSharedPreferences("OnBoarding", MODE_PRIVATE);
         ButterKnife.bind(this);
         setAnimation();
         startTimer();
@@ -55,7 +53,6 @@ public class SplashScreenActivity extends AppCompatActivity {
     private void nextActivity() {
         Intent intent = new Intent(this, OnBoardingActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-        sp.edit().putBoolean("firstTime", false).apply();
         intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         startActivity(intent);
         overridePendingTransition(0, 0);

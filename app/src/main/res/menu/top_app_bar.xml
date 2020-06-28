@@ -2,18 +2,6 @@
 
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-
-    <item
-        android:id="@+id/about"
-        android:contentDescription="@string/content_description_about"
-        android:title="@string/about"
-        app:showAsAction="never" />
-    <item
-        android:id="@+id/feedback"
-        android:contentDescription="@string/content_description_feedback"
-        android:title="@string/feedback"
-        app:showAsAction="never" />
-
     <item
         android:id="@+id/rate_us"
         android:contentDescription="@string/content_description_rate_us"

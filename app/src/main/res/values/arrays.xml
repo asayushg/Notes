@@ -2,11 +2,6 @@
 <resources>
 
     <string-array name="card_bg_colors">
-        <item>#EBF4FA</item>
-        <item>#F0F8ff</item>
-        <item>#f0ffff</item>
-        <item>#c3fdf9</item>
-        <item>#fcffff</item>
-        <item>#fdeef4</item>
+        <item>#e6f8f9</item>
     </string-array>
 </resources>

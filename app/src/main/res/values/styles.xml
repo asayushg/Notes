@@ -11,7 +11,19 @@
         <item name="titleTextStyle">?attr/textAppearanceHeadline6</item>
         <item name="subtitleTextStyle">?attr/textAppearanceSubtitle1</item>
         <item name="background">@color/colorPrimary</item>
-        <item name="actionModeCloseDrawable">@drawable/icon_close</item>
+        <item name="titleTextColor">@color/white</item>
+    </style>
+
+    <style name="Base.Widget.AppCompat.ActionMode.NoteActionModeStyle" parent="Widget.AppCompat.ActionMode">
+        <item name="titleTextStyle">@style/CustomActionModeTextStyle</item>
+        <item name="subtitleTextStyle">?attr/textAppearanceSubtitle1</item>
+        <item name="background">@color/colorPrimary</item>
+        <item name="titleTextColor">@color/white</item>
+    </style>
+    <style name="CustomActionModeTextStyle" parent="TextAppearance.AppCompat.Widget.ActionMode.Title">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
     </style>
 
     <style name="AppTheme.FullScreenDialog" parent="Theme.MaterialComponents.Light.Dialog">

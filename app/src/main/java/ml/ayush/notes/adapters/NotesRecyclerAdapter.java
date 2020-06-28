@@ -1,17 +1,17 @@
 package ml.ayush.notes.adapters;
 
 import android.content.Context;
-import android.graphics.Color;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.material.card.MaterialCardView;
-
-import java.util.ArrayList;
 import java.util.List;
 
 import ml.ayush.notes.R;
@@ -22,25 +22,22 @@ import ml.ayush.notes.models.Note;
 
 public class NotesRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
+    private static final String TAG = "NotesRecyclerAdapter";
     private List<Note> notesList;
-    private boolean checkedNotes = false;
     private OnNoteListener onNoteListener;
     private Context context;
     private boolean on_attach = true;
     private int lastAnimatedPosition = -1;
+    private List<Integer> cardsChecked;
 
-    public NotesRecyclerAdapter(OnNoteListener onNoteListener, Context context) {
+    public NotesRecyclerAdapter(OnNoteListener onNoteListener, Context context, List<Integer> cardsChecked) {
         this.onNoteListener = onNoteListener;
         this.context = context;
+        this.cardsChecked = cardsChecked;
     }
 
     public void setNotesList(List<Note> notesList) {
         this.notesList = notesList;
-        notifyDataSetChanged();
-    }
-
-    public void setCheckedNotes(boolean checkedNotes) {
-        this.checkedNotes = checkedNotes;
     }
 
     @NonNull
@@ -57,27 +54,21 @@ public class NotesRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.View
         ((NotesViewHolder) holder).content.setText(notesList.get(position).getContent());
         ((NotesViewHolder) holder).date.setText(notesList.get(position).getDate());
         ((NotesViewHolder) holder).cardView.setTag(position);
-        setBgColor(((NotesViewHolder) holder).cardView);
-        if (checkedNotes) {
+
+        if (cardsChecked.contains(position)) {
+            Log.d(TAG, "onBindViewHolder: " + position + " " + cardsChecked);
             ((NotesViewHolder) holder).cardView.setChecked(true);
-        } else ((NotesViewHolder) holder).cardView.setChecked(false);
+        } else {
+            ((NotesViewHolder) holder).cardView.setChecked(false);
+        }
         if (position > lastAnimatedPosition) {
             Animation animation = new Animation();
             animation.setAnimation(((NotesViewHolder) holder).cardView, position, on_attach);
             lastAnimatedPosition = position;
         }
-    }
 
-    private void setBgColor(MaterialCardView cardView) {
-        String[] colorsTxt = context.getResources().getStringArray(R.array.card_bg_colors);
-        List<Integer> colors = new ArrayList<>();
-        for (int i = 0; i < colorsTxt.length; i++) {
-            int newColor = Color.parseColor(colorsTxt[i]);
-            colors.add(newColor);
-        }
-        cardView.setCardBackgroundColor(colors.get((int) (Math.random() * (colors.size()))));
     }
-
+    
     @Override
     public int getItemCount() {
         return notesList == null ? 0 : notesList.size();
@@ -91,7 +82,6 @@ public class NotesRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.View
 
     public void addItem(Note note) {
         notesList.add(0, note);
-        notifyDataSetChanged();
     }
 
 }
