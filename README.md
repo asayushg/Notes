@@ -14,10 +14,10 @@ Go to the [Releases](https://github.com/asayushg/Notes/releases) to download the
   - LiveData - notify domain layer data to views.
   - Lifecycle - dispose of observing data when lifecycle state changes.
   - ViewModel - UI related data holder, lifecycle aware.
-  - Room Persistence - construct a database using the abstract layer.
+  - [Room Persistence](https://developer.android.com/jetpack/androidx/releases/room) - construct a database using the abstract layer.
 - Architecture
   - MVVM Architecture (View - DataBinding - ViewModel - Model)
-- [Retrofit2](https://github.com/square/retrofit) - construct the REST APIs and paging network data.
+- [Firebase](https://firebase.google.com/) - for saving user's notes with Firebase Database & Firebase Auth.
 
 
 ## Architecture
